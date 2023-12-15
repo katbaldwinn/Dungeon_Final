@@ -10,20 +10,21 @@ namespace DungeonLibrary
     //! Make it public, make it a child of Monster, Rename it to whatever you want
     public class MonsterTemplate : Monster
     {
-        //FIELDS - only if you have business rules
+          //FIELDS - only if you have business rules
 
 
-        //PROPS
-        //! Add at least one custom property. 
+          //PROPS
+          //! Add at least one custom property. 
 
-        //CTORS        
-        public MonsterTemplate(string name, int hitChance, int block, int maxLife, int maxDamage, int minDamage, string description) : base(name, hitChance, block, maxLife, maxDamage, minDamage, description)
-        {
-            //! Add your custom prop(s) to the parameter list and assign them here.
-        }
+          //CTORS        
+          public MonsterTemplate(string name, int hitChance, int block, int maxLife, int maxDamage, int minDamage, string description, bool isBoss) : base(name, hitChance, block, maxLife, maxDamage, minDamage, description)
+          {
+               IsBoss = isBoss;
+               //! Add your custom prop(s) to the parameter list and assign them here.
+          }
 
-        //! Default CTOR (creates a basic version of this monster)
-        public MonsterTemplate()
+          //! Default CTOR (creates a basic version of this monster)
+          public MonsterTemplate()
         {
             //Assign each of the props some default value here
             //Name, HitChance, Block, MaxLife, MaxDamage, MinDamage, Description
